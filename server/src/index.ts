@@ -1,16 +1,10 @@
-import express, { Request, Response } from 'express';
+import app from './app';
 import dotenv from 'dotenv';
+import path from 'path';
 
-dotenv.config();
+dotenv.config({ path: path.resolve(__dirname, '../../.env') });
 
-const app = express();
 const port = process.env.PORT || 3000;
-
-app.use(express.json());
-
-app.get('/', (req: Request, res: Response) => {
-  res.send('Werewolf Backend is Running!');
-});
 
 app.listen(port, () => {
   console.log(`[server]: Server is running at http://localhost:${port}`);
