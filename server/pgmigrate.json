@@ -1,0 +1,7 @@
+{
+  "migrationFolder": "migrations",
+  "direction": "up",
+  "databaseUrl": {
+    "env": "DATABASE_URL"
+  }
+}
